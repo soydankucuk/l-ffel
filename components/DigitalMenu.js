@@ -230,11 +230,11 @@ export default function DigitalMenu() {
           }`}
         >
           <div className="mx-auto w-full max-w-lg px-4 md:max-w-3xl lg:max-w-5xl">
-            <h1 className="text-center font-display text-[1.7rem] font-light uppercase leading-none tracking-[0.46em] text-white sm:text-[1.9rem]">
-              <span className="inline-block pl-[0.46em]">LÖFFEL</span>
+            <h1 className="text-center font-display text-[2.65rem] font-bold uppercase leading-none tracking-[-0.04em] text-white sm:text-[2.9rem]">
+              LÖFFEL
             </h1>
             <div className="mx-auto mt-3 h-px w-10 bg-gold/80" />
-            <nav aria-label="Menu categories" className="mt-3">
+            <nav aria-label="Menü kategorileri" className="mt-3">
               <div
                 ref={tabsRef}
                 id="category-tabs"
@@ -287,13 +287,13 @@ export default function DigitalMenu() {
                     </span>
                     <h2
                       id={`${category.id}-title`}
-                      className="font-display text-[2rem] font-light leading-none tracking-wide text-white"
+                      className="font-sans text-[1.65rem] font-semibold leading-none tracking-tight text-white"
                     >
                       {category.label}
                     </h2>
                   </div>
                   <p className="pb-1 text-xs tracking-wide text-cream/50">
-                    {category.items.length} items
+                    {category.items.length} ürün
                   </p>
                 </div>
                 <div className="mb-4 h-px bg-gradient-to-r from-gold/60 via-white/15 to-transparent" />
@@ -319,12 +319,12 @@ export default function DigitalMenu() {
               <SocialLink label="Facebook">
                 <FacebookIcon />
               </SocialLink>
-              <SocialLink label="Website">
+              <SocialLink label="Web sitesi">
                 <Globe className="h-[18px] w-[18px]" strokeWidth={1.75} aria-hidden="true" />
               </SocialLink>
             </div>
             <p className="mt-6 text-[11px] font-medium tracking-[0.28em] text-cream/55 uppercase">
-              Powered by {POWERED_BY}
+              {POWERED_BY} tarafından
             </p>
           </div>
         </footer>

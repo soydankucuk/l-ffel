@@ -8,7 +8,7 @@
 
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-josefin), ui-sans-serif, sans-serif;
+  --font-display: var(--font-display-face), ui-sans-serif, sans-serif;
 }
 
 html {

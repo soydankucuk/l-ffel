@@ -1,20 +1,32 @@
-import { Inter, Josefin_Sans } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
 });
 
-const josefin = Josefin_Sans({
-  subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500"],
-  variable: "--font-josefin",
+const display = localFont({
+  src: [
+    {
+      path: "./fonts/BigShouldersDisplay-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/BigShouldersDisplay-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-display-face",
+  display: "swap",
 });
 
 export const metadata = {
   title: "LÖFFEL",
-  description: "The LÖFFEL menu. Coffees, fresh drinks, meals, and snacks.",
+  description: "LÖFFEL menüsü. Kahveler, taze içecekler, yemekler ve atıştırmalıklar.",
   applicationName: "LÖFFEL",
   appleWebApp: {
     capable: true,
@@ -32,7 +44,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${josefin.variable} h-full`}>
+    <html lang="tr" className={`${inter.variable} ${display.variable} h-full`}>
       <body className="min-h-full font-sans text-cream antialiased">{children}</body>
     </html>
   );
